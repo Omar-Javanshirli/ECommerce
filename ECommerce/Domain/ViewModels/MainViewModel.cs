@@ -84,7 +84,11 @@ namespace ECommerce.Domain.ViewModels
 
             AdminCommand = new RelayCommand((e) =>
             {
+                var vm = new AdminViewModel();
+                var view = new AdminWindow();
+                view.DataContext = vm;
 
+                view.ShowDialog();
             });
 
         }

@@ -59,6 +59,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Domain\Views\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Domain\Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,6 +80,7 @@
       <DependentUpon>ECommerceDataClasses.dbml</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\SqlServer\OrderRepository.cs" />
+    <Compile Include="Domain\Abstractions\Model\OrderModel.cs" />
     <Compile Include="DataAccess\SqlServer\ProductRepository.cs" />
     <Compile Include="Domain\Abstractions\IAdminRepository.cs" />
     <Compile Include="Domain\Abstractions\ICustomerRepository.cs" />
@@ -84,9 +89,13 @@
     <Compile Include="Domain\Abstractions\IRepository.cs" />
     <Compile Include="Domain\Services\CustomerService.cs" />
     <Compile Include="Domain\Services\ProductService.cs" />
+    <Compile Include="Domain\ViewModels\AdminViewModel.cs" />
     <Compile Include="Domain\ViewModels\BaseViewModel.cs" />
     <Compile Include="Domain\ViewModels\MainViewModel.cs" />
     <Compile Include="Domain\ViewModels\ProductInfoViewModel.cs" />
+    <Compile Include="Domain\Views\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Domain\Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -137,9 +146,6 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Domain\AdditionalClasses\" />
-    <Folder Include="Domain\Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
