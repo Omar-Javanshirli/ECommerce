@@ -84,9 +84,10 @@ namespace ECommerce.Domain.ViewModels
             AddCommand = new RelayCommand((e) =>
             {
                 var vm=new AddAndUpdateViewModel();
+                vm.CheckAddOrUpdate = true;
                 var view = new AddAndUpdateWindow();
                 view.DataContext = vm;
-
+                App.MyStackPanel.Children.RemoveAt(0);
                 view.ShowDialog();
             });
         }

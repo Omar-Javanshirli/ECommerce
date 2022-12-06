@@ -117,6 +117,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Domain\Views\UserControls\UpdateProductUc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Views\ProductWindow.xaml.cs">
@@ -124,6 +128,9 @@
     </Compile>
     <Compile Include="Domain\Views\UserControls\AddProductUc.xaml.cs">
       <DependentUpon>AddProductUc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Views\UserControls\UpdateProductUc.xaml.cs">
+      <DependentUpon>UpdateProductUc.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
