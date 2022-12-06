@@ -44,6 +44,7 @@ namespace ECommerce.Domain.ViewModels
         public RelayCommand TotalPriceCommand { get; set; }
         public RelayCommand SelectProductCommand { get; set; }
         public RelayCommand AddCommand { get; set; }
+        public RelayCommand UpdateCommand { get; set; }
         public AdminViewModel()
         {
             _orderRepo = new OrderRepository();
@@ -84,10 +85,17 @@ namespace ECommerce.Domain.ViewModels
             AddCommand = new RelayCommand((e) =>
             {
                 var vm=new AddAndUpdateViewModel();
-                vm.CheckAddOrUpdate = true;
                 var view = new AddAndUpdateWindow();
                 view.DataContext = vm;
-                App.MyStackPanel.Children.RemoveAt(0);
+                view.ShowDialog();
+            });
+
+            UpdateCommand = new RelayCommand((e) =>
+            {
+                var vm =new UpdateViewModel();
+                var view = new UpdateWindow();
+                view.DataContext = vm;
+
                 view.ShowDialog();
             });
         }

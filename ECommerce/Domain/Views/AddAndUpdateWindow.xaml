@@ -8,9 +8,7 @@
         Title="AddAndUpdateWindow" Height="450" Width="800">
     <Grid>
         <StackPanel Width="378" Height="400" x:Name="MyStackpanel">
-            <DataGrid Height="400" ItemsSource="{Binding AllProducts}">
-                
-            </DataGrid>
+
         </StackPanel>
     </Grid>
 </Window>

@@ -41,6 +41,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -99,6 +101,8 @@
     <Compile Include="Domain\ViewModels\BaseViewModel.cs" />
     <Compile Include="Domain\ViewModels\MainViewModel.cs" />
     <Compile Include="Domain\ViewModels\ProductInfoViewModel.cs" />
+    <Compile Include="Domain\ViewModels\UpdateUcViewModel.cs" />
+    <Compile Include="Domain\ViewModels\UpdateViewModel.cs" />
     <Compile Include="Domain\Views\AddAndUpdateWindow.xaml.cs">
       <DependentUpon>AddAndUpdateWindow.xaml</DependentUpon>
     </Compile>
@@ -110,6 +114,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Domain\Views\ProductWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Domain\Views\UpdateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,6 +133,9 @@
   <ItemGroup>
     <Compile Include="Domain\Views\ProductWindow.xaml.cs">
       <DependentUpon>ProductWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Views\UpdateWindow.xaml.cs">
+      <DependentUpon>UpdateWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\Views\UserControls\AddProductUc.xaml.cs">
       <DependentUpon>AddProductUc.xaml</DependentUpon>

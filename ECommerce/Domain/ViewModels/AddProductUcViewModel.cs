@@ -71,5 +71,6 @@ namespace ECommerce.Domain.ViewModels
                 _productRepo.AddData(p);
             });
         }
+
     }
 }

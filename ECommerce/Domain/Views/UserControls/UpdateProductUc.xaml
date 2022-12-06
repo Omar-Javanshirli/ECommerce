@@ -5,8 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ECommerce.Domain.Views.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             Height="400" Width="300">
     <Grid>
-            
+        <StackPanel Background="White">
+            <TextBlock Width="100" Text="Name" HorizontalAlignment="Left" Margin="20" FontSize="15" Foreground="Orange"/>
+            <TextBox Width="200" HorizontalAlignment="Left" Margin="20 -10 0 0" Text="{Binding SelectedItem.Name}"/>
+            <TextBlock Width="100" Text="Description" HorizontalAlignment="Left" Margin="20" FontSize="15" Foreground="Orange"/>
+            <TextBox Width="200" HorizontalAlignment="Left" Margin="20 -10 0 0" Text="{Binding SelectedItem.Description}"/>
+            <TextBlock Width="100" Text="Price" HorizontalAlignment="Left" Margin="20" FontSize="15" Foreground="Orange"/>
+            <TextBox Width="200" HorizontalAlignment="Left" Margin="20 -10 0 0" Text="{Binding SelectedItem.Price}"/>
+            <TextBlock Width="100" Text="Discount" HorizontalAlignment="Left" Margin="20" FontSize="15" Foreground="Orange"/>
+            <TextBox Width="200" HorizontalAlignment="Left" Margin="20 -10 0 0" Text="{Binding SelectedItem.Discount}"/>
+            <TextBlock Width="100" Text="Quantity" HorizontalAlignment="Left" Margin="20" FontSize="15" Foreground="Orange"/>
+            <TextBox Width="200" HorizontalAlignment="Left" Margin="20 -10 0 0" Text="{Binding SelectedItem.Quantity}"/>
+            <Button Width="200" Height="20" Margin="10 20 70 0" Background="Transparent" Content="Update" Foreground="Orange"
+                    Command="{Binding UpdateCommand}" BorderBrush="Orange"/>
+        </StackPanel>   
     </Grid>
 </UserControl>

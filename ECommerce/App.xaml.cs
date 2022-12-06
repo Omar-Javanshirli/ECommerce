@@ -15,10 +15,11 @@ namespace ECommerce
     public partial class App : Application
     {
         public static StackPanel MyStackPanel;
-
+        public static StackPanel ProductStackPanel;
         public App()
         {
             MyStackPanel= new StackPanel();
+            
         }
     }
 }
