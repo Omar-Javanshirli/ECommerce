@@ -59,6 +59,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Domain\Views\AddAndUpdateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Domain\Views\AdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -89,10 +93,15 @@
     <Compile Include="Domain\Abstractions\IRepository.cs" />
     <Compile Include="Domain\Services\CustomerService.cs" />
     <Compile Include="Domain\Services\ProductService.cs" />
+    <Compile Include="Domain\ViewModels\AddAndUpdateViewModel.cs" />
+    <Compile Include="Domain\ViewModels\AddProductUcViewModel.cs" />
     <Compile Include="Domain\ViewModels\AdminViewModel.cs" />
     <Compile Include="Domain\ViewModels\BaseViewModel.cs" />
     <Compile Include="Domain\ViewModels\MainViewModel.cs" />
     <Compile Include="Domain\ViewModels\ProductInfoViewModel.cs" />
+    <Compile Include="Domain\Views\AddAndUpdateWindow.xaml.cs">
+      <DependentUpon>AddAndUpdateWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Domain\Views\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
@@ -104,10 +113,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Domain\Views\UserControls\AddProductUc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Views\ProductWindow.xaml.cs">
       <DependentUpon>ProductWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Views\UserControls\AddProductUc.xaml.cs">
+      <DependentUpon>AddProductUc.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

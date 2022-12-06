@@ -2,6 +2,7 @@
 using ECommerce.DataAccess.SqlServer;
 using ECommerce.Domain.Abstractions;
 using ECommerce.Domain.Abstractions.Model;
+using ECommerce.Domain.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -42,6 +43,7 @@ namespace ECommerce.Domain.ViewModels
 
         public RelayCommand TotalPriceCommand { get; set; }
         public RelayCommand SelectProductCommand { get; set; }
+        public RelayCommand AddCommand { get; set; }
         public AdminViewModel()
         {
             _orderRepo = new OrderRepository();
@@ -78,6 +80,16 @@ namespace ECommerce.Domain.ViewModels
                 else
                     TotalPrice = result.ToString();
             });
+
+            AddCommand = new RelayCommand((e) =>
+            {
+                var vm=new AddAndUpdateViewModel();
+                var view = new AddAndUpdateWindow();
+                view.DataContext = vm;
+
+                view.ShowDialog();
+            });
         }
+
     }
 }

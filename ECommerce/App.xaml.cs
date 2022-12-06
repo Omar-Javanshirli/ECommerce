@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace ECommerce
 {
@@ -13,5 +14,11 @@ namespace ECommerce
     /// </summary>
     public partial class App : Application
     {
+        public static StackPanel MyStackPanel;
+
+        public App()
+        {
+            MyStackPanel= new StackPanel();
+        }
     }
 }

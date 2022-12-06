@@ -71,8 +71,11 @@
                 <TextBlock Width="130" Height="25" Text="Total Amount" FontSize="20" Foreground="Orange"
                            Canvas.Left="300"/>
                 <TextBlock Width="100" Text="{Binding TotalPrice}" FontSize="20" Foreground="Orange" Canvas.Left="310" Canvas.Top="30"/>
+                <Button Width="100" Height="20" Background="Transparent" Content="Add Product" Foreground="Orange"
+                        Canvas.Top="50" Command="{Binding AddCommand}"/>
+                <Button Width="100" Height="20" Background="Transparent" Content="Update Product" Foreground="Orange"
+                        Canvas.Top="80" Command="{Binding UpdateCommand}"/>
             </Canvas>
-
         </StackPanel>
     </Grid>
 </Window>
